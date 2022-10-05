@@ -49,10 +49,20 @@ app.post('/users/register', async (req, res)=>{
     }else{
         //
        let hashedPassword = await bcrypt.hash(password, 10);//To hash the password before sending it to the database
-       console.log('====================================');
-       console.log(hashedPassword);
-       console.log('====================================');
-        
+      
+        //Query from y database
+        pool.query(
+            `SELECT * FROM users
+            WHERE email = $1` , [email], (err, result) =>{
+                if(err){
+                    throw err
+                }else{
+                    console.log('====================================');
+                    console.log(result.rows);
+                    console.log('====================================');
+                }
+            } 
+        )
     }
  
 
