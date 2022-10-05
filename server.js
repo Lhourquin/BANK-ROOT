@@ -8,8 +8,8 @@ app.set('view engine', 'ejs');// To tell the app to use ejs view engine
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res)=>{
-        res.send("Hello");
-        res.rendrer("index");
+      
+        res.render("index");
 });
 
 app.get('/users/login', (req, res)=>{
@@ -18,6 +18,10 @@ app.get('/users/login', (req, res)=>{
 
 app.get("/users/dashboard", (req, res) => {
     res.render("dashboard");
+});
+
+app.get("/users/dashboard/operation", (req, res) => {
+    res.render("operations");
 })
 app.listen(PORT,() => {
     console.log('====================================');
