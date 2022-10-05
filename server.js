@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
-/* const {pool} = require("./dbConfig");
-const bcrypt = require('bcrypt'); */
+const {pool} = require("./dbConfig");
+const bcrypt = require('bcrypt'); //To hash the password
 
 app.set('view engine', 'ejs');// To tell the app to use ejs view engine
+app.use(express.urlencoded({extended: false}));//This mid will allow as to send data from our frontend  to our server
 
 const PORT = process.env.PORT || 3000;
 
