@@ -10,22 +10,21 @@
     <body>
             <h1>Register</h1>
 
-            <ul>
-                <% if(typeof errors != 'undefined'){ %>
-                    <% errors.forEach(error => {%>
-                        <li><%= error.message %></li>
-                   <% })  %>
-               <% } %>
-            </ul>
+           
 
             <form action="/users/register" method="POST">
                 <div>
-                    <input type="text" id="name" name="name" placeholder="name" required/>
+                    <input type="text" id="firsname" name="firstname" placeholder="firstname" required/>
+                </div>
+                <div>
+                    <input type="text" id="lastname" name="lastname" placeholder="lastname" required/>
                 </div>
                 <div>
                     <input type="email" id="email" name="email" placeholder="email" required/>
                 </div>
-
+                <div>
+                    <input type="number" id="balance" name="balance" placeholder="balance" step="0.01" required/>
+                </div>
                
                 <div>
                     <input type="password" id="password" name="password" placeholder="password" required/>
