@@ -29,22 +29,31 @@ app.get("/users/register", (req, res) => {
     res.render("register");
 });
 
-app.post('/users/register', (req, res)=>{
+app.post('/users/register', async (req, res)=>{
     let {id, first_name, last_name, email, paswword, paswword2}  = req.body;
     let errors = [];
 
     if( !first_name || !last_name  ||  !email || !paswword  || ! paswword2 || !balance){
-        errors.push({messsage: "Please enter all the fields"});
+        errors.push({message: "Please enter all the fields"});
     }
 
     if( paswword != paswword2){
-        errors.push({messsage: "Password do not mach"});
+        errors.push({message: "Password do not mach"});
     }
 
     if(errors.length > 0){
+        console.log('====================================');
+        console.log(errors);
+        console.log('====================================');
         res.render('register', {errors} )
+    }else{
+        //
+
+        
     }
-    res.send('');
+
+
+    
 
 })
 app.listen(PORT,() => {
