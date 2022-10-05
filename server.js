@@ -30,28 +30,31 @@ app.get("/users/register", (req, res) => {
 });
 
 app.post('/users/register', async (req, res)=>{
-    let {id, first_name, last_name, email, paswword, paswword2}  = req.body;
+    let {first_name, last_name, email,balance,  password, password2}  = req.body;
     let errors = [];
-
-    if( !first_name || !last_name  ||  !email || !paswword  || ! paswword2 || !balance){
+ 
+    if( !first_name || !last_name  ||  !email || !password  || !password2 ){
         errors.push({message: "Please enter all the fields"});
     }
 
-    if( paswword != paswword2){
+    if( password != password2){
         errors.push({message: "Password do not mach"});
     }
 
     if(errors.length > 0){
         console.log('====================================');
-        console.log(errors);
+       
         console.log('====================================');
         res.render('register', {errors} )
     }else{
         //
-
+       let hashedPassword = await bcrypt.hash(password, 10);//To hash the password before sending it to the database
+       console.log('====================================');
+       console.log(hashedPassword);
+       console.log('====================================');
         
     }
-
+ 
 
     
 
