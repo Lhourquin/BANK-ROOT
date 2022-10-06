@@ -2,21 +2,29 @@ const express = require("express");
 const app = express();
 const {pool} = require("./dbConfig");
 const bcrypt = require('bcrypt'); //To hash the password
-
-
+const passport = require('passport');
 const session = require('express-session');
-const falsh = require("express-flash");
 const flash = require("express-flash");
+
+const initializePassword = require('./passportConfig');
+initializePassword(passport);
+
+
 
 app.set('view engine', 'ejs');// To tell the app to use ejs view engine
 app.use(express.urlencoded({extended: false}));//This middleware will allow as to send data from our frontend  to our server
 app.use(session({
-    secret: 'secret',
-    resave: false,
-    saveUninitialized: false
+    secret: 'secret',//Will encrpt all of our information
+    resave: false,//We resave our session variables if nothing been  changed
+    saveUninitialized: false,// ?
 }));
+app.use(flash());//To dispaly our flash messages
 
-app.use(flash());
+
+app.use(passport.session());//
+app.use(passport.initialize());//
+
+
 
 
 const PORT = process.env.PORT || 3000;
@@ -82,10 +90,15 @@ app.post('/users/register', async (req, res)=>{
                         //INSERT USER
                         pool.query(
                             `INSERT INTO users (first_name, last_name, role, email, password)
-                            VALUES($1, $2, $3, $4, $5)`, [first_name, last_name, 'client', email , hashedPassword], (err, result) =>{
+                            VALUES($1, $2, $3, $4, $5)
+                            RETURNING  user_id, password`, [first_name, last_name, 'client', email , hashedPassword], (err, result) =>{
                                     if(err){
                                         throw err;
                                     }
+
+                                    console.log('====================================');
+                                    console.log(result);
+                                    console.log('====================================');
                                     //We can  use RETURNING id, password ... 
                                     pool.query(
                                         `SELECT user_id FROM users 
@@ -141,8 +154,6 @@ app.post('/users/register', async (req, res)=>{
                                                                                 }
                                                                         }
                                                                         );
-
-                                                                                                                                
                                                             }
                                                         }
                                                 )  
@@ -151,6 +162,8 @@ app.post('/users/register', async (req, res)=>{
                                         }
                                  )
                             }
+
+
                         );
 
                      
@@ -165,10 +178,14 @@ app.post('/users/register', async (req, res)=>{
         )
     }
  
+});
 
-    
+app.post('/users/login', passport.authenticate("local", {
+    successRedirect: '/users/dashboard',
+    failureRedirect: '/users/login',
+    failureFlash: true// means if, we cant authenticate, the faileur will return one of our message on the server flash message
+} ));//
 
-})
 app.listen(PORT,() => {
     console.log('====================================');
     console.log(`Server running 🚀🚀on port ${PORT}`);
