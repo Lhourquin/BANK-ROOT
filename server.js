@@ -86,6 +86,7 @@ app.post('/users/register', async (req, res)=>{
                                     if(err){
                                         throw err;
                                     }
+                                    //We can  use RETURNING id, password ... 
                                     pool.query(
                                         `SELECT user_id FROM users 
                                         WHERE email = $1`, [email],  (err, reslut)=>{
@@ -130,13 +131,17 @@ app.post('/users/register', async (req, res)=>{
                                                                                 if(err){
                                                                                     throw err;
                                                                                 }else{
+
                                                                                     console.log('====================================');
                                                                                     console.log("All is good", reslut);
                                                                                     console.log('====================================');
+                                                                                    req.flash("success_msg", "You are registred now, Please login");
+                                                                                    res.redirect("/users/login");
+                                                                                    
                                                                                 }
                                                                         }
                                                                         );
-                                                                        
+
                                                                                                                                 
                                                             }
                                                         }
