@@ -54,3 +54,6 @@
 
 ![UML-SEQUENCE-SOLDE-DEPOT-RETRAIT-VIREMENT](img/UML/Diagramme_sequence.drawio.png)
  
+### Diagramme de cas d'utilisation
+
+![UML-USER-CASE](img/UML/usecase_bank_root.drawio.png)
