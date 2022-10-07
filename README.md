@@ -1,11 +1,11 @@
-# Conception et  Sécurisation de l'application Bank Root 🏧
+# Conception et  Sécurisation de l'application Bank Root 🏦
 
 ## La strategie de la sécurité: 🔒
 
 ##### 1\ La réduction de la surface d’attaque
 ###### Par le fait qu'un client ou un utilisateur ne pourra acceder  que à ses données
 
-##### \2 la journalisation: 📖
+##### \2 la journalisation: 
 ###### La mise en place d'un fichier journalisation ,  pour enregistrement dans des  des activités des utilisateurs, des anomalies et des événements liés à la sécurité
 
 ##### \3 RPGD(Le règlement général sur la protection des données):
