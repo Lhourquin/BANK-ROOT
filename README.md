@@ -35,4 +35,9 @@
 ##### * Les entrées fournies par les utilisateurs doivent être sanitisé(SANITIZATION), pour éviter les attaques SQLi
 ##### * CSP (Content Security Policy). Contre le détournement de clic(clickjacking), CSRF(Cross-Site Request Forgery) et XSS (Cross-Site Scripting)
 
- 
+## Conception UML
+
+### Diagramme de classe
+
+![UML-CLASSE](img/UML/diagramme%20de%20classe%20bank%20root.drawio.png)
+
