@@ -46,3 +46,7 @@
 #### Creditation
 ![UML-SEQUENCE-CREDIT](img/UML/diagramme-sequence-creditation.drawio%20(1).png)
 
+#### Debitation
+
+![UML-SEQUENCE-DEBIT](img/UML/diagramme-sequence-debitation.drawio.png)
+
