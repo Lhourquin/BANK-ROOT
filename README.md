@@ -1,8 +1,8 @@
 # Conception et  Sécurisation de l'application Bank Root 🏦
 
-## La strategie de la sécurité: 🔒
+## La strategie de la sécurité: 🔐
 
-#### Sauvegarde:
+#### Sauvegarde:🛟
 
 ##### 1\ La réduction de la surface d’attaque
 ###### Par le fait qu'un client ou un utilisateur ne pourra acceder  que à ses données
@@ -19,11 +19,11 @@
 ##### 5\ Cookies:
 ###### L'utilisation de cookies pour améliorer l'expérience utilisateur
 
-#### La Politique de sécurité des mots de passe:
+#### La Politique de sécurité des mots de passe:🗝
 
 ##### 1\  Longueur des mots de passe:
-###### Définir une longueur minimale permet d’avoir un certain contrôle sur le niveau de sécurité apporté par les mots de passe lors de leur création par les utilisateurs
+###### On a Défini une longueur minimale permet d’avoir un certain contrôle sur le niveau de sécurité apporté par les mots de passe lors de leur création par les utilisateurs
 
-##### 2\ Mettre en œuvre des règles sur la complexité des mots de passe
+##### 2\ Mise en œuvre des règles sur la complexité des mots de passe
 
-##### 3\ Le stockage du mot de passe doit être après le hachage
+##### 3\ Le stockage du mot de passe après le hachage
