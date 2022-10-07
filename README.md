@@ -27,3 +27,12 @@
 ##### 2\ Mise en œuvre des règles sur la complexité des mots de passe
 
 ##### 3\ Le stockage du mot de passe après le hachage
+
+#### La stratégie de sécurisation d’API et les utilisateurs:🚫
+
+##### *\ Utilisation le protocole Https au lieu du protocole Http pour assurer la sécurité des données envoyées entre les clients et le serveur
+##### *\ L'accès aux données se fait par l'authentification et l'autorisation : Chaque utilisateur doit s'authentifier pour accéder à son compte et chaque utilisateur a le droit d'accéder à certaines ressources
+##### *\ Les entrées fournies par les utilisateurs doivent être sanitisé(SANITIZATION), pour éviter les attaques SQLi
+##### *\ CSP (Content Security Policy). Contre le détournement de clic(clickjacking), CSRF(Cross-Site Request Forgery) et XSS (Cross-Site Scripting)
+
+ 
