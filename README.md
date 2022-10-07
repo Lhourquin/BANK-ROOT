@@ -14,13 +14,13 @@
 ##### 4\ Une stratégie de sauvegarde(3-2-1(3-2-1 ) :
 ###### Pour s'assurer que les données sont stockées ailleurs en cas de vol ou de destruction de données
 
-###### 5\ Cookies:
+##### 5\ Cookies:
 ###### L'utilisation de cookies pour améliorer l'expérience utilisateur
 
-### La Politique de sécurité des mots de passe:
+#### La Politique de sécurité des mots de passe:
 
 ##### 1\  Longueur des mots de passe:
-##### Définir une longueur minimale permet d’avoir un certain contrôle sur le niveau de sécurité apporté par les mots de passe lors de leur création par les utilisateurs
+###### Définir une longueur minimale permet d’avoir un certain contrôle sur le niveau de sécurité apporté par les mots de passe lors de leur création par les utilisateurs
 
-#### 2\ Mettre en œuvre des règles sur la complexité des mots de passe
-#### 3\ Le stockage du mot de passe doit être après le hachage
+##### 2\ Mettre en œuvre des règles sur la complexité des mots de passe
+##### 3\ Le stockage du mot de passe doit être après le hachage
