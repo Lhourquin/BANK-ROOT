@@ -2,6 +2,8 @@
 
 ## La strategie de la sécurité: 🔒
 
+#### Sauvegarde:
+
 ##### 1\ La réduction de la surface d’attaque
 ###### Par le fait qu'un client ou un utilisateur ne pourra acceder  que à ses données
 
@@ -23,4 +25,5 @@
 ###### Définir une longueur minimale permet d’avoir un certain contrôle sur le niveau de sécurité apporté par les mots de passe lors de leur création par les utilisateurs
 
 ##### 2\ Mettre en œuvre des règles sur la complexité des mots de passe
+
 ##### 3\ Le stockage du mot de passe doit être après le hachage
