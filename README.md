@@ -1,4 +1,58 @@
-# Conception et  Sécurisation de l'application Bank Root 🏦
+# Conception et Sécurisation de l'application Bank Root 🏦
+
+## La conception : MERISE
+ #### Le MLD 
+ ![MCD](img_merise/MCD.JPG)
+
+ #### Le MLD
+ ![MLD](img_merise/MLD.JPG)
+
+ #### Le dictionnaire de données :
+
+firstName
+lastName
+numberAccount
+debiteur
+crediteur
+soldes
+transaction
+montant
+userTypes
+libéléOpération
+password
+email
+emailBank
+nameBank
+other_Bank_Id
+id_bank
+Entités :
+
+User :
+- id_user
+- firstName
+- lastName
+- id_user
+- user_types
+- email
+- password
+
+Bank_Account :
+- id_account
+- account_number
+- sold
+- account_type
+
+Operation :
+- id_operation
+- libeler
+- amount
+- type_operation
+
+Bank :
+- id_bank
+- bank_name
+- adress
+
 
 ## La strategie de la sécurité: 🔐
 
