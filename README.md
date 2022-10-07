@@ -50,3 +50,7 @@
 
 ![UML-SEQUENCE-DEBIT](img/UML/diagramme-sequence-debitation.drawio.png)
 
+#### SOLDE/DEPOT/RETRAIT/VIREMENT
+
+![UML-SEQUENCE-SOLDE-DEPOT-RETRAIT-VIREMENT](img/UML/Diagramme_sequence.drawio.png)
+ 
