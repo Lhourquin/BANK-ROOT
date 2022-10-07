@@ -41,3 +41,8 @@
 
 ![UML-CLASSE](img/UML/diagramme%20de%20classe%20bank%20root.drawio.png)
 
+### Diagramme de séquence 
+
+#### Creditation
+![UML-SEQUENCE-CREDIT](img/UML/diagramme-sequence-creditation.drawio%20(1).png)
+
